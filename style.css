@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-body {
+.hero {
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(
@@ -15,15 +15,14 @@ body {
   );
   background-size: 200%;
   animation: background-pan 5s linear infinite;
-  
 }
 
-div {
+.boxContainer {
   display: flex;
 }
 
-div .box {
-    animation: box-intro 1.5s linear forwards;
+.box {
+  animation: box-intro 1.5s linear forwards;
 
   width: 10vw;
   height: 20vh;
@@ -34,7 +33,7 @@ div .box {
   opacity: 0.5;
 }
 
-div .box::before {
+.box::before {
   background-color: black;
   content: "";
   position: absolute;
@@ -45,28 +44,29 @@ div .box::before {
 .heading-container {
   height: 100vh;
   width: 100vw;
+  display: flex;
   flex-direction: column;
   position: absolute;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
-}
-h1 {
   animation: fade-in 2s 1.5s linear forwards;
-  color: white;
-  font-size: 10rem;
   opacity: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  color: white;
 }
-p {
-    animation: fade-in 2s 1.5s linear forwards;
-  color: white;
+.heroHeading {
+  font-size: 10rem;
+}
+.heroText {
   font-size: 3rem;
-  opacity: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+}
+.anotherPage {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
 }
 
 @keyframes background-pan {
@@ -97,4 +97,3 @@ p {
     opacity: 1;
   }
 }
-
